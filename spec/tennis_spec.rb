@@ -13,10 +13,10 @@ describe Tennis do
 
     end 
 
-    it "starts game" do
-        result = @tennis.start_game
+    it "gets the initian score" do
+        result = @tennis.get_initial_score
 
-        expect(result).to eq("Love-Love")
+        expect(result).to eq([0, 0])
 
     end 
     
