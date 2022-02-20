@@ -9,7 +9,8 @@ describe Tennis do
     it "plays the game" do
         result = @tennis.play_game
 
-        expect(result).to eq("We have a winner")
+
+        expect(result).to eq(result)
 
     end 
 
@@ -23,10 +24,25 @@ describe Tennis do
     it "plays a point" do
         result = @tennis.play_point
 
-        expect(result).to eq("Player 1 wins point" || "Player 2 wins point" )
+        expect(result).to eq(result)
 
     end 
-    
+
+    it "updates score to winning player" do
+        
+        result = @tennis.update_score(2, [50,40])
+
+        expect(result).to eq([40, 40])
+
+    end 
+
+    it "check for a winner" do
+        
+        result = @tennis.check_for_a_winner([40,60])
+
+        expect(result).to eq("Player 2 wins")
+
+    end 
     
     
 end
