@@ -13,12 +13,20 @@ describe Tennis do
 
     end 
 
-    it "gets the initian score" do
+    it "gets the initial score" do
         result = @tennis.get_initial_score
 
         expect(result).to eq([0, 0])
 
     end 
+
+    it "plays a point" do
+        result = @tennis.play_point
+
+        expect(result).to eq("Player 1 wins point" || "Player 2 wins point" )
+
+    end 
+    
     
     
 end

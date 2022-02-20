@@ -5,6 +5,17 @@ class Tennis
         return [0, 0]
     end
 
+    def play_point
+        winner = rand()
+        if(winner > 0.5) 
+           pointWinner =  "Player 1"
+        else 
+            pointWinner = "Player 2"
+        end
+
+        return "#{pointWinner} wins point"
+    end
+
     def play_game
         ##start game - score is love love 
         score = get_initial_score()
