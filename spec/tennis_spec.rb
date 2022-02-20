@@ -12,6 +12,13 @@ describe Tennis do
         expect(result).to eq("We have a winner")
 
     end 
+
+    it "starts game" do
+        result = @tennis.start_game
+
+        expect(result).to eq("Love-Love")
+
+    end 
     
     
 end
